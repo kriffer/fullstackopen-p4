@@ -29,6 +29,7 @@
   },
   "devDependencies": {
     "eslint": "^8.18.0",
-    "jest": "^28.1.1"
+    "jest": "^28.1.1",
+    "lodash": "^4.17.21"
   }
 }
