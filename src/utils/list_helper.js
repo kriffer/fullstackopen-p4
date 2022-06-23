@@ -25,7 +25,7 @@ const mostBlogs = (blogs) => {
 }
 
 const mostLikes = (blogs) => {
-  const result =  _(blogs)
+  const result = _(blogs)
     .groupBy(x => x.author)
     .map((value, key) => ({ author: key, likes: _.sumBy(value, 'likes') }))
     .value().reduce((a, b) => { return a.likes > b.likes ? a : b })

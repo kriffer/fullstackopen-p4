@@ -4,10 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node src/index.js",
-    "dev": "nodemon src/index.js",
+    "start": "cross-env NODE_ENV=production node src/index.js",
+    "dev": "cross-env NODE_ENV=development nodemon src/index.js",
     "lint": "eslint .",
-    "test": "jest --verbose"
+    "test": "cross-env NODE_ENV=test jest --verbose --runInBand --forceExit"
   },
   "repository": {
     "type": "git",
@@ -28,8 +28,10 @@
     "nodemon": "^2.0.16"
   },
   "devDependencies": {
+    "cross-env": "^7.0.3",
     "eslint": "^8.18.0",
     "jest": "^28.1.1",
-    "lodash": "^4.17.21"
+    "lodash": "^4.17.21",
+    "supertest": "^6.2.3"
   }
 }
